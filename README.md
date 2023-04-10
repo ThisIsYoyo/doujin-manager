@@ -9,7 +9,13 @@
 {user}:{path-to-doujin-manager}/doujin-manager/doujin_manager$ pip -r install requirement.txt
 ```
 
-做個 django 需要的 db
+mysql 相關設定
+1. 下載並安裝 mysql, 接著跑起來(有則跳過)
+2. 創個 user 名字為 "user", 密碼為 "password"
+3. 做個 new table 名為 "doujin-manager"
+mysql 設定就完成了
+
+初始化 django 需要的 db
 ```bash
 {user}:{path-to-doujin-manager}/doujin-manager/doujin_manager$ python manage.py migrate
 ```
@@ -21,8 +27,7 @@
 
 ### 透過 docker
 ```bash
-{user}:{path-to-doujin-manager}/doujin-manager$ docker build -t doujin-manager .
-{user}:{path-to-doujin-manager}/doujin-manager$ docker run -dp 8000:8000 doujin-manager
+{user}:{path-to-doujin-manager}/doujin-manager$ docker compose up -d
 ```
 網站將會開在 localhost:8000
 
