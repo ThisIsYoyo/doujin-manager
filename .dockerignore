@@ -1,5 +1,12 @@
+# system generate
 .python-version
 *.pyc
 doujin_manager/db.sqlite3
-README.md
+
+# for other service
 .gitignore
+playground/
+README.md
+
+
+docker-compose.yml
